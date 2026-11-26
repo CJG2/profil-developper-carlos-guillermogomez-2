@@ -1,5 +1,6 @@
 package com.example.profildeveloppeurcarlos.ui.screens
 
+import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.profildeveloppeurcarlos.data.carlosProfile
+import com.example.profildeveloppeurcarlos.data.thomasProfile
 import com.example.profildeveloppeurcarlos.model.Profile
 import com.example.profildeveloppeurcarlos.ui.components.ContactSection
 import com.example.profildeveloppeurcarlos.ui.components.ProfileActions
@@ -108,18 +110,44 @@ fun ProfileScreen(
     }
 }
 
-@Preview(showBackground = true, heightDp = 1600)
+// Les previews d'écran partagent ce contenu : seuls le profil et le mode (clair/sombre) changent.
 @Composable
-fun ProfileScreenPreview() {
+private fun ProfileScreenPreviewContent(profile: Profile) {
     ProfilDeveloppeurCarlosTheme {
         // Surface : applique la couleur de fond du thème, comme le Scaffold dans l'app.
         Surface(color = MaterialTheme.colorScheme.background) {
             ProfileScreen(
-                profile = carlosProfile,
+                profile = profile,
                 onContactClick = {},
                 onPortfolioClick = {},
                 modifier = Modifier.fillMaxSize()
             )
         }
     }
+}
+
+@Preview(name = "Clair", showBackground = true, heightDp = 1600)
+@Composable
+fun ProfileScreenLightPreview() {
+    ProfileScreenPreviewContent(profile = carlosProfile)
+}
+
+// uiMode = nuit : isSystemInDarkTheme() renvoie true, le thème applique donc DarkColorScheme.
+@Preview(
+    name = "Sombre",
+    showBackground = true,
+    heightDp = 1600,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
+@Composable
+fun ProfileScreenDarkPreview() {
+    ProfileScreenPreviewContent(profile = carlosProfile)
+}
+
+// Même écran avec un autre profil : montre que les composants sont réutilisables
+// et affiche l'état « non disponible » (pastille rouge, champ Disponibilité).
+@Preview(name = "Non disponible", showBackground = true, heightDp = 1400)
+@Composable
+fun ProfileScreenUnavailablePreview() {
+    ProfileScreenPreviewContent(profile = thomasProfile)
 }

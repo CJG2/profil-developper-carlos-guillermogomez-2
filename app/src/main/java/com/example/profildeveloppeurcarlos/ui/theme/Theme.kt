@@ -31,7 +31,8 @@ private val DarkColorScheme = darkColorScheme(
     surfaceContainerLow = GunmetalLight,
     surfaceContainer = GunmetalLight,
     surfaceContainerHigh = GunmetalLight,
-    surfaceContainerHighest = GunmetalLighter,
+    // Couleur des Card : différente de secondaryContainer pour que les pastilles restent visibles.
+    surfaceContainerHighest = GunmetalLight,
     outline = SlateLight,
     outlineVariant = GunmetalLighter
 )
@@ -44,7 +45,8 @@ private val LightColorScheme = lightColorScheme(
     onPrimaryContainer = SoftLinen,
     secondary = Gunmetal,
     onSecondary = SoftLinen,
-    secondaryContainer = DustGrey,
+    // Plus foncé que le fond et les cartes pour que les pastilles s'en détachent.
+    secondaryContainer = DustGreyDark,
     onSecondaryContainer = Gunmetal,
     background = DustGrey,
     onBackground = Gunmetal,

@@ -1,6 +1,6 @@
-# Profil développeur Compose
+# Profil développeur Compose 2
 
-Dépôt : https://github.com/CJG2/profil-developper-carlos-guillermogomez
+Dépôt : https://github.com/CJG2/profil-developper-carlos-guillermogomez-2
 
 ## Description
 

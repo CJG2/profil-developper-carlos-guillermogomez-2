@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.profildeveloppeurcarlos"
+        applicationId = "com.example.profildeveloppeurcarlos.v2"
         minSdk = 24
         targetSdk = 37
         versionCode = 1

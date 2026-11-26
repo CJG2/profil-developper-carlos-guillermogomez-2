@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatar générique : silhouette claire sur fond vert (couleurs de la palette). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Fond ForestGreen (carré, il sera découpé en cercle dans Compose) -->
+    <path
+        android:fillColor="#FF268C3C"
+        android:pathData="M0,0h120v120h-120z" />
+
+    <!-- Tête -->
+    <path
+        android:fillColor="#FFE0E2DB"
+        android:pathData="M60,28m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0" />
+
+    <!-- Épaules -->
+    <path
+        android:fillColor="#FFE0E2DB"
+        android:pathData="M20,120C20,92 38,74 60,74C82,74 100,92 100,120Z" />
+</vector>

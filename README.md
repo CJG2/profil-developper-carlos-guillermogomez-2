@@ -5,6 +5,8 @@ Dépôt : https://github.com/CJG2/profil-developper-carlos-guillermogomez-2
 Nouvelle version de l'application « Profil développeur », réalisée pour le devoir *Amélioration UI*.
 La première version reste disponible dans son propre dépôt : https://github.com/CJG2/profil-developper-carlos-guillermogomez
 
+Carlos Guillermo Gomez - ESGI 4 IW - Aix en provence
+
 ## Description
 
 L'application affiche la fiche d'un développeur sur un seul écran qui défile :
